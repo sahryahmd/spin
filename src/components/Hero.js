@@ -1,23 +1,15 @@
 "use client"
 import Link from "next/link"
+import Slideshow from "./Slideshow"
 
 const Hero = () => {
   return (
     <div className="relative h-screen">
-      {/* Background image with overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/bgmainsection.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 md:bg-black/50" />
-      </div>
+      {/* Slideshow background */}
+      <Slideshow />
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center text-center px-4">
+      <div className="absolute inset-0 flex items-center justify-center text-center px-4 z-10">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Welcome to SPIN CITY AGORA
@@ -43,7 +35,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <svg
           className="w-6 h-6 text-white"
           fill="none"

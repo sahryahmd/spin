@@ -7,6 +7,7 @@ import QBilliardSection from "@/components/QBilliardSection"
 import BarSection from "@/components/BarSection"
 import Maps from "@/components/Maps"
 import Footer from "@/components/Footer"
+import RandomImageGallery from "@/components/RandomImageGallery"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BowlingSection />
+      <RandomImageGallery />
       <QBilliardSection />
       <BarSection />
       <Maps />

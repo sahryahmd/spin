@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 
 const QBilliardSection = () => {
   return (
@@ -89,6 +90,25 @@ const QBilliardSection = () => {
                 <p className="ml-3 text-gray-600">Comfortable Viewing Areas</p>
               </div>
             </div>
+            <Link
+              href="http://wa.me/6288290275999"
+              className="mt-8 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#751F46] hover:bg-[#8B254E] transition-colors duration-200"
+            >
+              Order Now
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
