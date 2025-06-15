@@ -7,15 +7,21 @@ const Maps = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Map */}
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-            <Image
-              src="/maps.PNG"
-              alt="Location Map"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+          <a
+            href="https://www.google.com/maps/place/Spincity+Bowling/@-6.1988713,106.8188768,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f50073a6d489:0xec3143b21c06cdb8!8m2!3d-6.1988713!4d106.8214517!16s%2Fg%2F11y8wnvw3h?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+              <Image
+                src="/maps.PNG"
+                alt="Location Map"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </a>
 
           {/* Location Info */}
           <div className="flex flex-col justify-center">
