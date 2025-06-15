@@ -16,12 +16,13 @@ const Navbar = () => {
                 <Image
                   src="/logo.png"
                   alt="SPIN CITY AGORA Logo"
-                  fill
+                  width={64}
+                  height={64}
                   className="object-contain"
                   priority
                 />
               </div> */}
-              <span className="hidden md:block text-2xl font-bold text-white">
+              <span className="text-2xl font-bold text-white">
                 SPIN CITY AGORA
               </span>
             </Link>

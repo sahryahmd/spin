@@ -1,119 +1,113 @@
 "use client"
+import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules"
+import { Autoplay, EffectFade } from "swiper/modules"
+import Image from "next/image"
+
+// Import Swiper styles
 import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
 import "swiper/css/effect-fade"
 
 const slides = [
   {
     id: 1,
-    image: "/bgmainsection.webp",
+    image: "/1.jpg",
+    title: "Bowling",
+    description: "Experience the thrill of bowling",
   },
   {
     id: 2,
-    image: "/sectionqbill.webp",
+    image: "/2.jpg",
+    title: "QBilliard",
+    description: "Enjoy a game of pool",
   },
   {
     id: 3,
-    image: "/spincitymain.webp",
+    image: "/3.jpg",
+    title: "Bar & Lounge",
+    description: "Relax and unwind",
   },
   {
     id: 4,
-    image: "/1.jpg",
+    image: "/4.jpg",
+    title: "Bowling",
+    description: "Experience the thrill of bowling",
   },
   {
     id: 5,
-    image: "/2.jpg",
+    image: "/5.jpg",
+    title: "QBilliard",
+    description: "Enjoy a game of pool",
   },
   {
     id: 6,
-    image: "/3.jpg",
+    image: "/6.jpg",
+    title: "Bar & Lounge",
+    description: "Relax and unwind",
   },
   {
     id: 7,
-    image: "/4.jpg",
+    image: "/7.jpg",
+    title: "Bowling",
+    description: "Experience the thrill of bowling",
   },
   {
     id: 8,
-    image: "/5.jpg",
+    image: "/8.jpg",
+    title: "QBilliard",
+    description: "Enjoy a game of pool",
+  },
+  {
+    id: 9,
+    image: "/9.jpg",
+    title: "Bar & Lounge",
+    description: "Relax and unwind",
   },
 ]
 
 const Slideshow = () => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
-    <div className="relative h-screen">
+    <div className="relative w-full h-screen">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+        modules={[Autoplay, EffectFade]}
         effect="fade"
-        spaceBetween={0}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
         loop={true}
-        className="h-full"
+        className="w-full h-full"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div
-              className="relative h-full w-full"
-              style={{
-                backgroundImage: `url(${slide.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 bg-black/50" />
+            <div className="relative w-full h-full">
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover"
+                priority={slide.id === 1}
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                <h2 className="text-4xl md:text-6xl font-bold mb-4">
+                  {slide.title}
+                </h2>
+                <p className="text-xl md:text-2xl">{slide.description}</p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Content overlay */}
-      <div className="absolute inset-0 flex items-center justify-center text-center px-4 z-10">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Welcome to SPIN CITY AGORA
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
-            Your Ultimate Entertainment Destination
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#bowling"
-              className="bg-[#864581] text-white px-8 py-3 rounded-full hover:bg-[#751F46] transition-colors text-lg font-semibold"
-            >
-              Experience Bowling
-            </a>
-            <a
-              href="#qbilliard"
-              className="bg-[#751F46] text-white px-8 py-3 rounded-full hover:bg-[#864581] transition-colors text-lg font-semibold"
-            >
-              Play QBilliard
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </div>
     </div>
   )
 }
