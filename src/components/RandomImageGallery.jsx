@@ -22,37 +22,65 @@ const RandomImageGallery = () => {
     "/sectionqbill.webp",
   ]
 
-  // Define fixed sizes for landscape and portrait
-  const imageSizes = {
-    landscape: {
+  // Define fixed sizes for landscape images with different dimensions
+  const imageSizes = [
+    {
       width: 300,
       height: 200,
     },
-    portrait: {
-      width: 200,
-      height: 300,
+    {
+      width: 350,
+      height: 220,
     },
-  }
+    {
+      width: 280,
+      height: 180,
+    },
+    {
+      width: 320,
+      height: 210,
+    },
+    {
+      width: 290,
+      height: 190,
+    },
+  ]
 
   useEffect(() => {
     // Create initial images for two rows
     const imagesPerRow = 5 // 5 images per row
+
+    // Function to get spacing based on screen width
+    const getSpacing = () => {
+      const width = window.innerWidth
+      if (width <= 768) {
+        // Mobile
+        return 10 // Closer spacing for mobile
+      } else if (width <= 1024) {
+        // Tablet
+        return 15 // Medium spacing for tablet
+      } else {
+        // Desktop
+        return 25 // Wider spacing for desktop
+      }
+    }
+
     const initialImages = Array.from(
       { length: imagesPerRow * 2 },
       (_, index) => {
-        // Randomly choose between landscape and portrait
-        const isLandscape = Math.random() > 0.5
-        const size = isLandscape ? imageSizes.landscape : imageSizes.portrait
+        // Randomly select a size from imageSizes array
+        const size = imageSizes[Math.floor(Math.random() * imageSizes.length)]
 
         // Calculate position based on row and index
         const row = Math.floor(index / imagesPerRow)
         const rowIndex = index % imagesPerRow
+        const spacing = getSpacing()
 
         // Calculate initial positions with proper spacing
         const xPosition =
           row === 0
-            ? rowIndex * 20 // Top row starts from left
-            : 100 - rowIndex * 20 // Bottom row starts from right
+            ? rowIndex * spacing // Top row starts from left
+            : 100 - rowIndex * spacing // Bottom row starts from right
 
         const yPosition = row * 40 + 10 // 40% height per row, 10% margin
 
@@ -72,6 +100,30 @@ const RandomImageGallery = () => {
     )
 
     setImages(initialImages)
+
+    // Add resize listener to update spacing
+    const handleResize = () => {
+      setImages((prevImages) =>
+        prevImages.map((img, index) => {
+          const row = Math.floor(index / imagesPerRow)
+          const rowIndex = index % imagesPerRow
+          const spacing = getSpacing()
+
+          const xPosition =
+            row === 0 ? rowIndex * spacing : 100 - rowIndex * spacing
+
+          return {
+            ...img,
+            position: {
+              ...img.position,
+              x: xPosition,
+            },
+          }
+        })
+      )
+    }
+
+    window.addEventListener("resize", handleResize)
 
     // Animation loop
     const animate = () => {
@@ -101,7 +153,10 @@ const RandomImageGallery = () => {
     }
 
     const animationInterval = setInterval(animate, 50)
-    return () => clearInterval(animationInterval)
+    return () => {
+      clearInterval(animationInterval)
+      window.removeEventListener("resize", handleResize)
+    }
   }, [])
 
   return (
