@@ -22,7 +22,7 @@ const images = [
 
 const DualCarousel = () => {
   return (
-    <div className="w-full py-8 bg-black">
+    <div className="w-full py-8 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-8">
           Our Gallery
