@@ -25,12 +25,15 @@ const DualCarousel = () => {
   return (
     <div
       className="w-full py-8"
-      style={{ background: "linear-gradient(135deg, #fff 80%, #751F46 100%)" }}
+      style={{
+        background:
+          "radial-gradient(circle at 0% 0%, #751F46 3%, #fff 15%, #fff 80%, #751F46 100%)",
+      }}
     >
       <div className="container mx-auto px-4 relative flex flex-col items-center">
-        <h2 className="text-4xl font-bold text-center text-white mb-8">
+        {/* <h2 className="text-4xl font-bold text-center text-white mb-8">
           Our Gallery
-        </h2>
+        </h2> */}
 
         {/* First Row - Left to Right */}
         <div className="w-full mb-4">
