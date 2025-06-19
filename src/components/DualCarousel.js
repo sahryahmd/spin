@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
 import Image from "next/image"
+import { FaInstagram } from "react-icons/fa"
 
 // Import Swiper styles
 import "swiper/css"
@@ -22,14 +23,17 @@ const images = [
 
 const DualCarousel = () => {
   return (
-    <div className="w-full py-8 bg-black">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-8">
+    <div
+      className="w-full py-8"
+      style={{ background: "linear-gradient(135deg, #fff 80%, #751F46 100%)" }}
+    >
+      <div className="container mx-auto px-4 relative flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center text-[#751F46] mb-8">
           Our Gallery
         </h2>
 
         {/* First Row - Left to Right */}
-        <div className="mb-8">
+        <div className="w-full mb-4">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={10}
@@ -69,8 +73,26 @@ const DualCarousel = () => {
           </Swiper>
         </div>
 
+        {/* Social Media Button - absolute center between carousels */}
+        <div
+          className="w-full flex justify-center relative z-10"
+          style={{ marginTop: "-32px", marginBottom: "-32px" }}
+        >
+          <a
+            href="https://www.instagram.com/spincitybowling/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold text-lg shadow-xl bg-[#751F46] hover:bg-[#864581] backdrop-blur-md"
+            aria-label="Instagram Spin City Agora"
+            style={{ boxShadow: "0 4px 24px 0 rgba(0,0,0,0.25)" }}
+          >
+            <FaInstagram size={24} />
+            Follow us on Instagram
+          </a>
+        </div>
+
         {/* Second Row - Right to Left */}
-        <div>
+        <div className="w-full mt-4">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={10}
