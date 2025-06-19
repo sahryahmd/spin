@@ -23,18 +23,12 @@ const images = [
 
 const DualCarousel = () => {
   return (
-<<<<<<< HEAD
     <div
       className="w-full py-8"
       style={{ background: "linear-gradient(135deg, #fff 80%, #751F46 100%)" }}
     >
       <div className="container mx-auto px-4 relative flex flex-col items-center">
-        <h2 className="text-4xl font-bold text-center text-[#751F46] mb-8">
-=======
-    <div className="w-full py-8 bg-white">
-      <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-8">
->>>>>>> 716fa4d6556f22671b1b01bd27f435467512218e
           Our Gallery
         </h2>
 
