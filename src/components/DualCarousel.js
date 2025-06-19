@@ -31,11 +31,6 @@ const DualCarousel = () => {
       }}
     >
       <div className="w-full relative flex flex-col items-center">
-        {/* <h2 className="text-4xl font-bold text-center text-white mb-8">
-          Our Gallery
-        </h2> */}
-
-        {/* First Row - Left to Right */}
         <div className="w-full mb-4">
           <Swiper
             modules={[Autoplay]}

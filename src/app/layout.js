@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "Spin City Agora",
-  description: "Strike Some Fun",
+  title: "Spin City Agora | Strike Some Fun!",
+  description: "Strike Some Fun!",
 }
 
 export default function RootLayout({ children }) {
