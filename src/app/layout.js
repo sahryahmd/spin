@@ -51,6 +51,14 @@ export default function RootLayout({ children }) {
     <html lang="id">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="bowling, billiard, bar, lounge, hiburan, Jakarta, Spin City, Agora, tempat nongkrong, event, keluarga, olahraga, minuman, makanan, pusat hiburan, Jakarta Pusat, DKI Jakarta"
+        />
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"

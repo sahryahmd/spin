@@ -80,7 +80,7 @@ const DualCarousel = () => {
             href="https://www.instagram.com/spincitybowling/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold text-lg shadow-xl bg-[#751F46] hover:bg-[#864581] backdrop-blur-md"
+            className="flex items-center gap-2 px-6 py-3 rounded-md text-white font-semibold text-lg shadow-xl bg-[#751F46] hover:bg-[#864581] backdrop-blur-md"
             aria-label="Instagram Spin City Agora"
             style={{ boxShadow: "0 4px 24px 0 rgba(0,0,0,0.25)" }}
           >
