@@ -27,6 +27,7 @@ export default function PromoForm() {
     })
     if (res.ok) {
       setStatus("success")
+      setForm({ nama: "", tanggal: "", bulan: "", nomor: "" })
     } else {
       setStatus("error")
     }
@@ -51,7 +52,7 @@ export default function PromoForm() {
     >
       <h2
         style={{
-          marginBottom: 24,
+          marginBottom: 8,
           color: "#751F46",
           fontWeight: 700,
           fontSize: 28,
@@ -60,9 +61,23 @@ export default function PromoForm() {
       >
         Promo Form
       </h2>
+      <p
+        style={{
+          color: "#751F46",
+          fontWeight: 500,
+          marginBottom: 20,
+          textAlign: "center",
+          fontSize: 16,
+          lineHeight: 1.5,
+        }}
+      >
+        🎉 Get exclusive promos from Spin City!
+        <br />
+        Fill in your details below and enjoy our special offers just for you.
+      </p>
       <input
         name="nama"
-        placeholder="Nama"
+        placeholder="Full Name"
         value={form.nama}
         onChange={handleChange}
         required
@@ -80,7 +95,7 @@ export default function PromoForm() {
         type="number"
         min="1"
         max="31"
-        placeholder="Tanggal Lahir"
+        placeholder="Day of Birth (1-31)"
         value={form.tanggal}
         onChange={handleChange}
         required
@@ -96,7 +111,7 @@ export default function PromoForm() {
       <input
         name="bulan"
         type="text"
-        placeholder="Bulan Lahir (misal: Januari)"
+        placeholder="Month of Birth (e.g. January)"
         value={form.bulan}
         onChange={handleChange}
         required
@@ -112,7 +127,7 @@ export default function PromoForm() {
       <input
         name="nomor"
         type="tel"
-        placeholder="Nomor Handphone"
+        placeholder="Phone Number"
         value={form.nomor}
         onChange={handleChange}
         required
@@ -142,16 +157,16 @@ export default function PromoForm() {
           transition: "background 0.2s",
         }}
       >
-        {status === "loading" ? "Mengirim..." : "Kirim"}
+        {status === "loading" ? "Submitting..." : "Submit"}
       </button>
       {status === "success" && (
         <p style={{ color: "#2ecc40", marginTop: 16, fontWeight: 600 }}>
-          Data berhasil dikirim!
+          Your data has been submitted successfully!
         </p>
       )}
       {status === "error" && (
         <p style={{ color: "#e74c3c", marginTop: 16, fontWeight: 600 }}>
-          Gagal mengirim data.
+          Failed to submit data. Please try again.
         </p>
       )}
     </form>
