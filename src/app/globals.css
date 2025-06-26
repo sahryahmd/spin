@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Membuat placeholder input lebih gelap dan kontras */
+input::placeholder {
+  color: #751f46;
+  opacity: 0.8;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+input {
+  color: #751f46;
+  font-weight: 600;
+  font-size: 16px;
+}

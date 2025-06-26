@@ -10,6 +10,7 @@ import Maps from "@/components/Maps"
 import Footer from "@/components/Footer"
 import DualCarousel from "@/components/DualCarousel"
 import ReelsVideo from "@/components/ReelsVideo"
+import PromoForm from "@/components/PromoForm"
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         ]}
       />
       <Maps />
+      <PromoForm />
       <Footer />
     </main>
   )
