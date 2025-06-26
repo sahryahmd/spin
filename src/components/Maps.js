@@ -12,7 +12,7 @@ const Maps = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+            <div className="relative h-[400px] w-full rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
               <Image
                 src="/maps.PNG"
                 alt="Location Map"
