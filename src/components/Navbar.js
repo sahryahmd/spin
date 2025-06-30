@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#FFD700] focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-[#751F46] focus:outline-none bg-white bg-opacity-80 hover:bg-opacity-100 hover:bg-[#FFD700] transition-colors"
               aria-label="Open menu"
             >
               <svg
