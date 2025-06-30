@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { FaInstagram } from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -138,6 +139,18 @@ const Navbar = () => {
               See Our Instagram
             </span>
           </a>
+          <button
+            onClick={() => {
+              setIsMenuOpen(false)
+              setTimeout(() => {
+                const el = document.getElementById("promoform")
+                if (el) el.scrollIntoView({ behavior: "smooth" })
+              }, 300)
+            }}
+            className="mt-6 w-64 flex items-center justify-center gap-2 bg-[#FFD700] text-[#751F46] font-bold text-lg py-4 rounded-lg shadow hover:bg-yellow-400 transition-colors"
+          >
+            Get a Promo? Click Me <FaArrowRight className="text-2xl" />
+          </button>
           <div className="mt-6 text-white text-center text-base font-medium leading-snug w-64">
             Agora Mall Lantai L2 Jl. M.H. Thamrin No.10,
             <br />
