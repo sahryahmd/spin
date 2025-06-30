@@ -32,8 +32,9 @@ const Maps = () => {
                   Address
                 </h3>
                 <p className="text-gray-200">
-                  Jl. M.H. Thamrin No.10, Kb. Melati, Kecamatan Tanah Abang,
-                  Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10230
+                  Agora Mall Lantai L2 Jl. M.H. Thamrin No.10, Kb. Melati,
+                  Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus
+                  Ibukota Jakarta 10230
                 </p>
               </div>
               <div>
@@ -51,7 +52,7 @@ const Maps = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Contact
                 </h3>
-                <p className="text-gray-200">Phone: 088290275999</p>
+                <p className="text-gray-200">Phone: +62 882-9027-5999</p>
                 <p className="text-gray-200">
                   Email: spincity@spincitybowling.com
                 </p>

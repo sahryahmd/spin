@@ -11,16 +11,14 @@ import Footer from "@/components/Footer"
 import DualCarousel from "@/components/DualCarousel"
 import ReelsVideo from "@/components/ReelsVideo"
 import PromoForm from "@/components/PromoForm"
-import KeywordDisplay from "@/components/KeywordDisplay"
+// import KeywordDisplay from "@/components/KeywordDisplay"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <div className="max-w-6xl mx-auto px-6">
-        <KeywordDisplay />
-      </div>
+      <div className="max-w-6xl mx-auto px-6">{/* <KeywordDisplay /> */}</div>
       <BowlingSection />
       <DualCarousel />
       <QBilliardSection />
