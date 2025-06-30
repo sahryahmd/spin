@@ -19,79 +19,37 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 bg-[#751F46] shadow-lg`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-        {/* Logo kiri */}
-        <Link href="/" className="flex items-center">
-          <div className="relative w-12 h-12 mr-3">
-            <Image
-              src="/logo.png"
-              alt="SPIN CITY AGORA Logo"
-              width={48}
-              height={48}
-              className="object-contain"
-              priority
-            />
-          </div>
-          <span className="text-2xl font-bold text-white tracking-wide">
-            SPIN CITY AGORA
-          </span>
-        </Link>
-        {/* Desktop menu */}
-        <div className="hidden md:flex items-center space-x-12">
-          <Link
-            href="#bowling"
-            className="text-white font-semibold text-lg hover:text-[#FFD700] transition-colors px-2 py-1"
-          >
-            Bowling
-          </Link>
-          <Link
-            href="#qbilliard"
-            className="text-white font-semibold text-lg hover:text-[#FFD700] transition-colors px-2 py-1"
-          >
-            QBilliard
-          </Link>
-          <Link
-            href="#bar"
-            className="text-white font-semibold text-lg hover:text-[#FFD700] transition-colors px-2 py-1"
-          >
-            Bar & Lounge
-          </Link>
-          <Link
-            href="#contact"
-            className="bg-white text-[#751F46] font-bold text-lg px-6 py-2 rounded-full hover:bg-[#FFD700] hover:text-[#751F46] transition-colors shadow"
-          >
-            Contact Us
-          </Link>
-        </div>
-        {/* Hamburger */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#FFD700] focus:outline-none"
-            aria-label="Open menu"
-          >
-            <svg
-              className="h-7 w-7"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
+    <nav className="fixed w-full z-50 transition-all duration-300 bg-transparent">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end h-20">
+        {/* Tombol hamburger hanya muncul saat menu tertutup */}
+        {!isMenuOpen && (
+          <div className="flex items-center">
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#FFD700] focus:outline-none"
+              aria-label="Open menu"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+              <svg
+                className="h-7 w-7"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
-      {/* Mobile menu fullscreen */}
+      {/* Menu fullscreen: tampil di semua mode saat hamburger diklik */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-[#751F46] z-50 flex flex-col items-center justify-center md:hidden animate-slideUp">
+        <div className="fixed inset-0 bg-[#751F46] z-50 flex flex-col items-center justify-center animate-slideUp">
+          {/* Tombol X hanya muncul saat menu terbuka */}
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-6 right-6 text-white text-4xl font-bold focus:outline-none"
@@ -111,6 +69,7 @@ const Navbar = () => {
             className="text-white text-5xl mb-6 font-black transition-all duration-200 transform hover:text-[#FFD700] hover:scale-110"
             onClick={() => setIsMenuOpen(false)}
           >
+            {" "}
             QBilliard
           </Link>
           <Link

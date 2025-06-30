@@ -16,7 +16,6 @@ import PromoForm from "@/components/PromoForm"
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Navbar />
       <Hero />
       <div className="max-w-6xl mx-auto px-6">{/* <KeywordDisplay /> */}</div>
       <BowlingSection />

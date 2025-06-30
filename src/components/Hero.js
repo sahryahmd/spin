@@ -1,15 +1,24 @@
 "use client"
 import Link from "next/link"
-import Slideshow from "./Slideshow"
+// import Slideshow from "./Slideshow"
 
 const Hero = () => {
   return (
     <div className="relative h-screen">
-      {/* Slideshow background */}
-      <Slideshow />
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src="/bg-section.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center text-center px-4 z-10">
+      <div className="absolute inset-0 flex items-center justify-center text-center px-4 z-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Welcome to SPIN CITY AGORA
@@ -35,7 +44,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <svg
           className="w-6 h-6 text-white"
           fill="none"
