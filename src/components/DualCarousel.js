@@ -10,15 +10,27 @@ import "swiper/css"
 import "swiper/css/autoplay"
 
 const images = [
+  "/8.jpg",
   "/1.jpg",
+  "/9.jpg",
   "/2.jpg",
+  "/10.jpg",
   "/3.jpg",
-  "/4.jpg",
-  "/5.jpg",
+  "/12.jpg",
   "/6.jpg",
+  "/13.jpg",
+  "/7.jpg",
+  "/11.jpg",
+]
+
+// Tambahkan array untuk gambar portrait
+const portraitImages = [
   "/7.jpg",
   "/8.jpg",
   "/9.jpg",
+  "/10.jpg",
+  "/12.jpg",
+  "/13.jpg",
 ]
 
 const DualCarousel = () => {
@@ -57,13 +69,26 @@ const DualCarousel = () => {
           >
             {[...images, ...images].map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="relative h-48 md:h-64 w-full rounded-lg overflow-hidden">
+                <div
+                  className={`relative w-full rounded-lg overflow-hidden ${
+                    portraitImages.includes(image)
+                      ? "aspect-[3/4] w-3/4 mx-auto"
+                      : "aspect-[4/3]"
+                  }`}
+                >
                   <Image
                     src={image}
                     alt={`Gallery image ${index + 1}`}
                     fill
-                    style={{ objectFit: "cover" }}
-                    className="hover:scale-110 transition-transform duration-300"
+                    style={{
+                      objectFit: "cover",
+                      ...(portraitImages.includes(image)
+                        ? { aspectRatio: "3/4" }
+                        : {}),
+                    }}
+                    className={`hover:scale-110 transition-transform duration-300 ${
+                      portraitImages.includes(image) ? "portrait-img" : ""
+                    }`}
                   />
                 </div>
               </SwiperSlide>
@@ -116,13 +141,26 @@ const DualCarousel = () => {
           >
             {[...images, ...images].map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="relative h-48 md:h-64 w-full rounded-lg overflow-hidden">
+                <div
+                  className={`relative w-full rounded-lg overflow-hidden ${
+                    portraitImages.includes(image)
+                      ? "aspect-[3/4] w-3/4 mx-auto"
+                      : "aspect-[4/3]"
+                  }`}
+                >
                   <Image
                     src={image}
                     alt={`Gallery image ${index + 1}`}
                     fill
-                    style={{ objectFit: "cover" }}
-                    className="hover:scale-110 transition-transform duration-300"
+                    style={{
+                      objectFit: "cover",
+                      ...(portraitImages.includes(image)
+                        ? { aspectRatio: "3/4" }
+                        : {}),
+                    }}
+                    className={`hover:scale-110 transition-transform duration-300 ${
+                      portraitImages.includes(image) ? "portrait-img" : ""
+                    }`}
                   />
                 </div>
               </SwiperSlide>

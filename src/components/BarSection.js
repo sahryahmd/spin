@@ -17,7 +17,7 @@ const BarSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300">
             <Image
-              src="/7.jpg"
+              src="/4.jpg"
               alt="Bar & Lounge"
               fill
               className="object-cover"
