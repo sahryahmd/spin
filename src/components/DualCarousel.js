@@ -72,7 +72,7 @@ const DualCarousel = () => {
                 <div
                   className={`relative w-full rounded-lg overflow-hidden ${
                     portraitImages.includes(image)
-                      ? "aspect-[3/4] w-3/4 mx-auto"
+                      ? "aspect-[3/4] w-3/4 mx-auto bg-[#751F46]"
                       : "aspect-[4/3]"
                   }`}
                 >
@@ -144,7 +144,7 @@ const DualCarousel = () => {
                 <div
                   className={`relative w-full rounded-lg overflow-hidden ${
                     portraitImages.includes(image)
-                      ? "aspect-[3/4] w-3/4 mx-auto"
+                      ? "aspect-[3/4] w-3/4 mx-auto bg-[#751F46]"
                       : "aspect-[4/3]"
                   }`}
                 >
