@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="bowling, billiard, bar, lounge, hiburan, Jakarta, Spin City, Agora, tempat nongkrong, event, keluarga, olahraga, minuman, makanan, pusat hiburan, Jakarta Pusat, DKI Jakarta"
+          content="bowling, billiard, bar, lounge, hiburan, Jakarta, Spin City,spincity,bolwing terdekat, billiard terdekat, billiar jakarta, bowling jakarta, Agora, tempat nongkrong, event, keluarga, olahraga, minuman, makanan, pusat hiburan, Jakarta Pusat, DKI Jakarta"
         />
         <meta
           name="robots"
