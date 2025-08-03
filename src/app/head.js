@@ -1,10 +1,10 @@
 export default function Head() {
   return (
     <>
-      <title>Spin City Agora - Bowling, Billiard, Bar & Promo</title>
+      <title>Spincity Agora - Bowling, Billiard, Bar & Promo</title>
       <meta
         name="description"
-        content="Tempat hiburan terbaik di kota Anda: bowling, billiard, bar, promo menarik, dan banyak lagi!"
+        content="Tempat hiburan terbaik di kota Anda: bowling, billiard, bar, promo menarik, dan banyak lagi!, spincity spincity bowling"
       />
       <meta
         name="keywords"
