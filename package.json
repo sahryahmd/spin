@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "echo 'Sitemap handled by route handler'"
   },
   "dependencies": {
     "googleapis": "^150.0.1",
