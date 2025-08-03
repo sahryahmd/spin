@@ -79,7 +79,7 @@ const Navbar = () => {
             className="text-white text-5xl mb-6 font-black transition-all duration-200 transform hover:text-[#FFD700] hover:scale-110"
             onClick={() => setIsMenuOpen(false)}
           >
-            Bowling
+            Bowling Jakarta Pusat
           </Link>
           <Link
             href="#qbilliard"
@@ -87,7 +87,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             {" "}
-            QBilliard
+            Billiard Jakarta
           </Link>
           <Link
             href="#bar"

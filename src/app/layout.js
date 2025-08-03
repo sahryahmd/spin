@@ -13,21 +13,21 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "SPIN CITY AGORA | Strike Some Fun!",
+  title: "SPIN CITY AGORA MALL - Pusat Hiburan Terlengkap di Jakarta Pusat",
   description:
-    "Tempat hiburan terbaik di Jakarta: Bowling, Billiard, Bar & Lounge. Kunjungi SPIN CITY AGORA sekarang!",
+    "SPIN CITY AGORA MALL - Tempat bowling, billiard, bar & lounge terbaik di Jakarta Pusat. Fasilitas modern, suasana nyaman untuk keluarga dan teman. Bowling Jakarta Pusat terdekat.",
   openGraph: {
-    title: "SPIN CITY AGORA - Bowling, Billiard, Bar & Lounge Jakarta",
+    title: "SPIN CITY AGORA MALL - Pusat Hiburan Terlengkap di Jakarta Pusat",
     description:
-      "Tempat hiburan terbaik di Jakarta: Bowling, Billiard, Bar & Lounge.",
+      "SPIN CITY AGORA MALL - Tempat bowling, billiard, bar & lounge terbaik di Jakarta Pusat. Fasilitas modern, suasana nyaman untuk keluarga dan teman.",
     url: "https://www.spincityagora.my.id/",
-    siteName: "SPIN CITY AGORA",
+    siteName: "SPIN CITY AGORA MALL",
     images: [
       {
         url: "/logo.png",
         width: 800,
         height: 600,
-        alt: "SPIN CITY AGORA Logo",
+        alt: "SPIN CITY AGORA MALL Logo",
       },
     ],
     locale: "id_ID",
@@ -35,9 +35,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPIN CITY AGORA - Bowling, Billiard, Bar & Lounge Jakarta",
+    title: "SPIN CITY AGORA MALL - Pusat Hiburan Terlengkap di Jakarta Pusat",
     description:
-      "Tempat hiburan terbaik di Jakarta: Bowling, Billiard, Bar & Lounge.",
+      "SPIN CITY AGORA MALL - Tempat bowling, billiard, bar & lounge terbaik di Jakarta Pusat. Fasilitas modern, suasana nyaman untuk keluarga dan teman.",
     images: ["/logo.png"],
     site: "@spincityagora",
   },
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="bowling, billiard, bar, lounge, hiburan, Jakarta, Spin City,spincity,bolwing terdekat, billiard terdekat, billiar jakarta, bowling jakarta, Agora, tempat nongkrong, event, keluarga, olahraga, minuman, makanan, pusat hiburan, Jakarta Pusat, DKI Jakarta"
+          content="spincity agora mall, bowling jakarta pusat, spincity bowling kota jakarta pusat, spin city agora mall, spincity agora, spincity bowling agora, bowling agora, billiard jakarta, bar lounge jakarta, pusat hiburan jakarta pusat, tempat bowling jakarta pusat, bowling di jakarta pusat, billiard terdekat, bar terdekat, lounge jakarta, hiburan keluarga jakarta, event jakarta, olahraga jakarta, minuman jakarta, makanan jakarta, DKI Jakarta"
         />
         <meta
           name="robots"
@@ -67,9 +67,11 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EntertainmentBusiness",
-              name: "SPIN CITY AGORA",
+              name: "SPIN CITY AGORA MALL",
               description:
-                "Tempat hiburan terbaik di Jakarta: Bowling, Billiard, Bar & Lounge.",
+                "SPIN CITY AGORA MALL - Pusat hiburan terbaik di Jakarta Pusat dengan fasilitas bowling, billiard, bar & lounge modern.",
+              keywords:
+                "spincity agora mall, bowling jakarta pusat, spincity bowling kota jakarta pusat, spin city agora mall, spincity agora, spincity bowling agora, bowling agora, billiard jakarta, bar lounge jakarta, pusat hiburan jakarta pusat",
               image: "https://www.spincityagora.my.id/logo.png",
               url: "https://www.spincityagora.my.id/",
               telephone: "+6288290275999",

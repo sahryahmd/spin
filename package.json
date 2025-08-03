@@ -10,9 +10,9 @@
     "postbuild": "echo 'Sitemap handled by route handler'"
   },
   "dependencies": {
+    "framer-motion": "^12.23.12",
     "googleapis": "^150.0.1",
     "gsap": "^3.13.0",
-    "locomotive-scroll": "^4.1.4",
     "next": "15.3.3",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",

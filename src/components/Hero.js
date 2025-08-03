@@ -21,23 +21,26 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center text-center px-4 z-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Welcome to SPIN CITY AGORA
+            SPIN CITY AGORA MALL
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
-            Your Ultimate Entertainment Destination
+          <p className="text-xl md:text-2xl text-white/90 mb-4">
+            Pusat Hiburan Terlengkap di Jakarta Pusat
+          </p>
+          <p className="text-lg md:text-xl text-white/80 mb-8">
+            Bowling, Billiard, Bar & Lounge Terbaik di Jakarta Pusat
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#bowling"
               className="bg-[#864581] text-white px-8 py-3 rounded-full hover:bg-[#751F46] transition-colors text-lg font-semibold"
             >
-              Experience Bowling
+              Bowling Jakarta Pusat
             </Link>
             <Link
               href="#qbilliard"
               className="bg-[#751F46] text-white px-8 py-3 rounded-full hover:bg-[#864581] transition-colors text-lg font-semibold"
             >
-              Play QBilliard
+              Billiard Jakarta
             </Link>
           </div>
         </div>

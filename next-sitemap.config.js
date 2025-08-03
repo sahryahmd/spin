@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://spincityagora.my.id",
+  siteUrl: "https://www.spincityagora.my.id",
   generateRobotsTxt: true,
   exclude: ["/admin", "/api"],
   sitemapSize: 7000,
@@ -11,5 +11,6 @@ module.exports = {
       { userAgent: "*", allow: "/" },
       { userAgent: "*", disallow: ["/admin", "/api"] },
     ],
+    additionalSitemaps: ["https://www.spincityagora.my.id/sitemap.xml"],
   },
 }

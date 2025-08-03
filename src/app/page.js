@@ -1,5 +1,6 @@
 "use client"
-import React, { useEffect, useRef } from "react"
+import React from "react"
+import { motion } from "framer-motion"
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import BowlingSection from "@/components/BowlingSection"
@@ -10,71 +11,121 @@ import Footer from "@/components/Footer"
 import DualCarousel from "@/components/DualCarousel"
 import ReelsVideo from "@/components/ReelsVideo"
 import PromoForm from "@/components/PromoForm"
-import "locomotive-scroll/dist/locomotive-scroll.css"
+import StructuredData from "@/components/StructuredData"
+import SmoothScroll from "@/components/SmoothScroll"
 // import KeywordDisplay from "@/components/KeywordDisplay"
 
 export default function Home() {
-  const scrollRef = useRef(null)
-
-  useEffect(() => {
-    let scroll
-    import("locomotive-scroll").then((LocomotiveScroll) => {
-      scroll = new LocomotiveScroll.default({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.08,
-        multiplier: 1,
-        class: "is-reveal",
-      })
-    })
-    return () => {
-      if (scroll) scroll.destroy()
-    }
-  }, [])
-
   return (
-    <div ref={scrollRef} data-scroll-container>
+    <div>
+      <StructuredData />
       <main className="min-h-screen">
-        <section data-scroll-section>
-          <Hero data-scroll data-scroll-speed="1.2" />
-        </section>
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Hero />
+        </motion.section>
 
-        <div className="max-w-6xl mx-auto px-6" data-scroll-section>
+        <motion.div
+          className="max-w-6xl mx-auto px-6"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           {/* <KeywordDisplay /> */}
-        </div>
-        <section data-scroll-section>
-          <BowlingSection data-scroll data-scroll-speed="0.8" />
-        </section>
-        <section data-scroll-section>
-          <DualCarousel data-scroll data-scroll-speed="1" />
-        </section>
-        <section data-scroll-section>
-          <QBilliardSection data-scroll data-scroll-speed="1.1" />
-        </section>
-        <section data-scroll-section>
-          <BarSection data-scroll data-scroll-speed="0.9" />
-        </section>
-        <section data-scroll-section>
-          <ReelsVideo
-            sources={[
-              "/qbilliard reyes.mp4",
-              "/qbilliard reyes 2.mp4",
-              "/qbilliard dj.mp4",
-              "/qbilliard 3.mp4",
-            ]}
-            data-scroll
-            data-scroll-speed="1.3"
-          />
-        </section>
-        <section data-scroll-section>
-          <Maps data-scroll data-scroll-speed="1" />
-        </section>
-        <section data-scroll-section>
-          <PromoForm data-scroll data-scroll-speed="1" />
-        </section>
-        <section data-scroll-section>
+        </motion.div>
+
+        <SmoothScroll speed={0.8}>
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <BowlingSection />
+          </motion.section>
+        </SmoothScroll>
+
+        <SmoothScroll speed={1}>
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <DualCarousel />
+          </motion.section>
+        </SmoothScroll>
+
+        <SmoothScroll speed={1.1}>
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <QBilliardSection />
+          </motion.section>
+        </SmoothScroll>
+
+        <SmoothScroll speed={0.9}>
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <BarSection />
+          </motion.section>
+        </SmoothScroll>
+
+        <SmoothScroll speed={1.3}>
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <ReelsVideo
+              sources={[
+                "/qbilliard reyes.mp4",
+                "/qbilliard reyes 2.mp4",
+                "/qbilliard dj.mp4",
+                "/qbilliard 3.mp4",
+              ]}
+            />
+          </motion.section>
+        </SmoothScroll>
+
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Maps />
+        </motion.section>
+
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <PromoForm />
+        </motion.section>
+
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <Footer />
-        </section>
+        </motion.section>
       </main>
     </div>
   )

@@ -2,13 +2,12 @@
 User-agent: *
 Allow: /
 
-# *
-User-agent: *
+# Disallow admin and api routes
 Disallow: /admin
 Disallow: /api
 
-# Host
-Host: https://spincityagora.my.id
+# Sitemap
+Sitemap: https://www.spincityagora.my.id/sitemap.xml
 
-# Sitemaps
-Sitemap: https://spincityagora.my.id/sitemap.xml
+# Crawl-delay
+Crawl-delay: 1

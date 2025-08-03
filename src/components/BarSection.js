@@ -6,11 +6,16 @@ const BarSection = () => {
     <section id="bar" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#751F46] mb-4">
-            Bar & Lounge
-          </h2>
-          <p className="text-xl text-gray-600">
-            Relax and unwind in our stylish bar and lounge
+          <h1 className="text-4xl md:text-5xl font-bold text-[#751F46] mb-4">
+            Bar & Lounge Jakarta - SPIN CITY AGORA MALL
+          </h1>
+          <p className="text-xl text-gray-600 mb-4">
+            Bar modern dengan menu minuman lengkap dan suasana nyaman di Jakarta
+            Pusat
+          </p>
+          <p className="text-lg text-gray-500">
+            Nikmati suasana bar & lounge terbaik di SPIN CITY AGORA MALL dengan
+            live entertainment
           </p>
         </div>
 
@@ -26,13 +31,14 @@ const BarSection = () => {
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold text-[#751F46] mb-6">
-              Premium Bar Experience
-            </h3>
+            <h2 className="text-3xl font-bold text-[#751F46] mb-6">
+              Bar & Lounge Premium di Jakarta Pusat
+            </h2>
             <p className="text-gray-600 mb-6">
-              Enjoy our carefully curated selection of drinks and cocktails in a
-              sophisticated atmosphere. Perfect for casual gatherings or special
-              occasions.
+              Nikmati pilihan minuman dan cocktail yang dipilih dengan teliti
+              dalam suasana yang sophisticated. Perfect untuk gathering casual
+              maupun acara khusus di Jakarta Pusat. SPIN CITY AGORA MALL
+              menyediakan bar & lounge terbaik dengan live entertainment.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
