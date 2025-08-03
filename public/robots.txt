@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.spincityagora.my.id
+Host: https://spincityagora.my.id
 
 # Sitemaps
-Sitemap: https://www.spincityagora.my.id/sitemap.xml
+Sitemap: https://spincityagora.my.id/sitemap.xml
