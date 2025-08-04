@@ -73,13 +73,13 @@ const Navbar = () => {
           }`}
         >
           {/* Spacer agar konten tidak tertutup header */}
-          <div className="h-20" />
+          <div className="mb-36" />
           <Link
             href="#bowling"
             className="text-white text-5xl mb-6 font-black transition-all duration-200 transform hover:text-[#FFD700] hover:scale-110"
             onClick={() => setIsMenuOpen(false)}
           >
-            Bowling Jakarta Pusat
+            Bowling
           </Link>
           <Link
             href="#qbilliard"
