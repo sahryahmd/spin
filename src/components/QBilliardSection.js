@@ -14,8 +14,8 @@ const QBilliardSection = () => {
             Nikmati permainan billiard dengan meja premium di Jakarta Pusat
           </p>
           <p className="text-lg text-gray-500">
-            SPIN CITY AGORA MALL menyediakan 8 meja billiard berkualitas tinggi
-            untuk pengalaman bermain terbaik
+            SPIN CITY AGORA MALL menyediakan billiard berkualitas tinggi untuk
+            pengalaman bermain terbaik
           </p>
         </div>
 
@@ -37,9 +37,9 @@ const QBilliardSection = () => {
             </h2>
             <p className="text-gray-600 mb-6">
               Nikmati permainan billiard sempurna dengan meja berkualitas tinggi
-              di SPIN CITY AGORA MALL Jakarta Pusat. Tersedia 8 meja billiard
-              premium dengan peralatan lengkap untuk pengalaman bermain terbaik
-              di Jakarta.
+              di SPIN CITY AGORA MALL Jakarta Pusat. Tersedia billiard premium
+              dengan peralatan lengkap untuk pengalaman bermain terbaik di
+              Jakarta.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
@@ -114,9 +114,7 @@ const QBilliardSection = () => {
                     />
                   </svg>
                 </div>
-                <p className="ml-3 text-gray-600">
-                  Harga Terjangkau: Rp 30.000/jam
-                </p>
+                <p className="ml-3 text-gray-600">Harga Terjangkau</p>
               </div>
             </div>
 

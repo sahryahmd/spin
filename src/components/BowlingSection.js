@@ -39,8 +39,8 @@ const BowlingSection = () => {
               Nikmati fasilitas bowling modern dengan sistem scoring otomatis,
               area duduk yang nyaman, dan suasana yang vibrant. Perfect untuk
               pemain casual maupun bowler serius di Jakarta Pusat. SPIN CITY
-              AGORA MALL menyediakan 12 jalur bowling dengan teknologi terbaru
-              untuk pengalaman bowling terbaik di Jakarta Pusat.
+              AGORA MALL bowling dengan teknologi terbaru untuk pengalaman
+              bowling terbaik di Jakarta Pusat.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
@@ -113,9 +113,7 @@ const BowlingSection = () => {
                     />
                   </svg>
                 </div>
-                <p className="ml-3 text-gray-600">
-                  Harga Terjangkau: Weekday Rp 25.000, Weekend Rp 30.000
-                </p>
+                <p className="ml-3 text-gray-600">Harga Terjangkau</p>
               </div>
             </div>
 
